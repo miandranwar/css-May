@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/grade-js/docs/dist/grade.js"></script>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100vw;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: chocolate;
+        }
+        h1 {
+            color:blue;
+            font-size: 10rem;
+            font-weight: 300;
+            text-shadow: 2px 2px 6px #000;
+        }
+        .container:nth-child(1) {
+            filter: hue-rotate(260deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Muhammad</h1>
+    </div>
+    <div class="container">
+        <h1>Ahmad</h1>
+    </div>
+
+
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            /* (copy from grade.js github page)
+                A NodeList of all your image containers (Or a single Node).
+                The library will locate an <img /> within each
+                container to create the gradient from.
+             */
+            Grade(document.querySelectorAll('.container'))
+        })
+    </script>
+
+</body>
+</html>
